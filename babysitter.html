@@ -1,109 +1,106 @@
 <form action="https://api.web3forms.com/submit" method="POST">
 
-    <!-- 🔑 Web3Forms Key -->
     <input type="hidden" name="access_key" value="10208d19-ff5e-4629-80d0-a95ba0ce98ba">
-
-    <!-- 🔁 Weiterleitung nach Absenden -->
     <input type="hidden" name="redirect" value="https://fzgarching.github.io/FZGarching/danke.html">
-
-    <!-- 🛡 Spam-Schutz -->
     <input type="checkbox" name="botcheck" style="display:none;">
-
-    <!-- 📧 Betreff der Mail -->
     <input type="hidden" name="subject" value="Neue Babysitter-Anmeldung">
 
-    <h2 class="section-title">👤 Persönliche Daten</h2>
+    <div class="card">
 
-    <div class="row">
-        <div class="col">
-            <label>Vorname</label>
-            <input type="text" name="first_name" required>
+        <h2 class="section-title">👤 Persönliche Daten</h2>
+
+        <div class="row">
+            <div class="col">
+                <label>Vorname</label>
+                <input type="text" name="first_name" required>
+            </div>
+
+            <div class="col">
+                <label>Nachname</label>
+                <input type="text" name="last_name" required>
+            </div>
         </div>
 
-        <div class="col">
-            <label>Nachname</label>
-            <input type="text" name="last_name" required>
+        <div class="row">
+            <div class="col">
+                <label>Geburtsdatum</label>
+                <input type="date" name="birth_date">
+            </div>
+
+            <div class="col">
+                <label>Adresse</label>
+                <input type="text" name="address">
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col">
+                <label>Telefonnummer</label>
+                <input type="tel" name="phone">
+            </div>
+
+            <div class="col">
+                <label>E-Mail-Adresse</label>
+                <input type="email" name="email" required>
+            </div>
+        </div>
+
+        <h2 class="section-title">⭐ Erfahrung & Qualifikationen</h2>
+
+        <div class="row">
+            <div class="col">
+                <label>Erfahrung?</label>
+                <select name="experience">
+                    <option value="">Bitte auswählen</option>
+                    <option value="yes">Ja</option>
+                    <option value="no">Nein</option>
+                </select>
+            </div>
+
+            <div class="col">
+                <label>Wie lange?</label>
+                <input type="text" name="experience_duration">
+            </div>
+        </div>
+
+        <label>Qualifikationen</label>
+        <textarea name="qualifications"></textarea>
+
+        <h2 class="section-title">❤️ Verfügbarkeit</h2>
+
+        <label>Tage</label>
+        <div class="days">
+            <label><input type="checkbox" name="available_days[]" value="Montag"> Montag</label>
+            <label><input type="checkbox" name="available_days[]" value="Dienstag"> Dienstag</label>
+            <label><input type="checkbox" name="available_days[]" value="Mittwoch"> Mittwoch</label>
+            <label><input type="checkbox" name="available_days[]" value="Donnerstag"> Donnerstag</label>
+            <label><input type="checkbox" name="available_days[]" value="Freitag"> Freitag</label>
+            <label><input type="checkbox" name="available_days[]" value="Samstag"> Samstag</label>
+            <label><input type="checkbox" name="available_days[]" value="Sonntag"> Sonntag</label>
+        </div>
+
+        <br>
+
+        <label>Zeiten</label>
+        <input type="text" name="available_times">
+
+        <h2 class="section-title">🛡 Sonstiges</h2>
+
+        <label>Warum Babysitter?</label>
+        <textarea name="motivation"></textarea>
+
+        <label>Sonstiges</label>
+        <textarea name="additional_info"></textarea>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="consent" required>
+            Ich bestätige die Richtigkeit der Angaben
+        </label>
+
+        <button type="submit">🚀 Anmeldung absenden</button>
+
     </div>
-
-    <div class="row">
-        <div class="col">
-            <label>Geburtsdatum</label>
-            <input type="date" name="birth_date">
-        </div>
-
-        <div class="col">
-            <label>Adresse</label>
-            <input type="text" name="address">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <label>Telefonnummer</label>
-            <input type="tel" name="phone">
-        </div>
-
-        <div class="col">
-            <label>E-Mail-Adresse</label>
-            <input type="email" name="email" required>
-        </div>
-    </div>
-
-    <h2 class="section-title">⭐ Erfahrung & Qualifikationen</h2>
-
-    <div class="row">
-        <div class="col">
-            <label>Erfahrung?</label>
-            <select name="experience">
-                <option value="">Bitte auswählen</option>
-                <option value="yes">Ja</option>
-                <option value="no">Nein</option>
-            </select>
-        </div>
-
-        <div class="col">
-            <label>Wie lange?</label>
-            <input type="text" name="experience_duration">
-        </div>
-    </div>
-
-    <label>Qualifikationen</label>
-    <textarea name="qualifications"></textarea>
-
-    <h2 class="section-title">❤️ Verfügbarkeit</h2>
-
-    <label>Tage</label>
-    <div class="days">
-        <label><input type="checkbox" name="available_days[]" value="Montag"> Montag</label>
-        <label><input type="checkbox" name="available_days[]" value="Dienstag"> Dienstag</label>
-        <label><input type="checkbox" name="available_days[]" value="Mittwoch"> Mittwoch</label>
-        <label><input type="checkbox" name="available_days[]" value="Donnerstag"> Donnerstag</label>
-        <label><input type="checkbox" name="available_days[]" value="Freitag"> Freitag</label>
-        <label><input type="checkbox" name="available_days[]" value="Samstag"> Samstag</label>
-        <label><input type="checkbox" name="available_days[]" value="Sonntag"> Sonntag</label>
-    </div>
-
-    <br>
-
-    <label>Zeiten</label>
-    <input type="text" name="available_times">
-
-    <h2 class="section-title">🛡 Sonstiges</h2>
-
-    <label>Warum Babysitter?</label>
-    <textarea name="motivation"></textarea>
-
-    <label>Sonstiges</label>
-    <textarea name="additional_info"></textarea>
-
-    <br><br>
-
-    <label>
-        <input type="checkbox" name="consent" required>
-        Ich bestätige die Richtigkeit der Angaben
-    </label>
-
-    <button type="submit">🚀 Anmeldung absenden</button>
 
 </form>
